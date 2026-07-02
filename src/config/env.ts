@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 import path from 'path';
-import fs from 'fs';
 import { z } from 'zod';
 
 const envPath = path.resolve(__dirname, '../../.env');

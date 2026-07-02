@@ -6,7 +6,7 @@ export declare class OrdersService {
     /**
      * Submit a new checkout order under a database transaction
      */
-    static createOrder(userId: string, itemsInput: OrderItemInput[], paymentMethod?: string): Promise<{
+    static createOrder(userId: string, itemsInput: OrderItemInput[]): Promise<{
         items: ({
             product: {
                 name: string;

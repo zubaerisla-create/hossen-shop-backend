@@ -66,6 +66,20 @@ const DEFAULT_CMS = {
             { id: 'n3', label: 'Deals', href: '/deals' },
         ],
     },
+    flashPromo: {
+        title: 'Fresh Harvest Flash Deals!',
+        badge: '⚡ Limited Time Only',
+        description: 'Unlock exclusive discounts up to 40% OFF on fresh organic produce. Hand-picked and delivered direct to your door!',
+        image: '/images/flash_deal_promo.png',
+        buttonText: 'Shop Deals Now',
+    },
+    flashLine: {
+        promoText: 'Flash Deals: Up to 40% OFF Select Fresh Organic Produce!',
+        freeDeliveryText: 'Free delivery on orders over $20!',
+        discountCodeText: 'Special Discount Code: HOSSEN10',
+        linkText: 'Shop Now',
+        linkUrl: '/deals',
+    },
 };
 class CmsService {
     /**

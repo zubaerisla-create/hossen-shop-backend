@@ -31,6 +31,9 @@ export declare class ProductsService {
             originalPrice: number | null;
             discount: number | null;
             categoryId: string;
+            isFlashDeal: boolean;
+            flashLabel: string | null;
+            flashDiscount: number | null;
         })[];
         totalItems: number;
     }>;
@@ -55,6 +58,9 @@ export declare class ProductsService {
         originalPrice: number | null;
         discount: number | null;
         categoryId: string;
+        isFlashDeal: boolean;
+        flashLabel: string | null;
+        flashDiscount: number | null;
     }>;
     /**
      * Create a new product
@@ -67,6 +73,9 @@ export declare class ProductsService {
         discount?: number;
         image: string;
         categoryId: string;
+        isFlashDeal?: boolean;
+        flashLabel?: string;
+        flashDiscount?: number;
     }): Promise<{
         name: string;
         id: string;
@@ -80,6 +89,9 @@ export declare class ProductsService {
         originalPrice: number | null;
         discount: number | null;
         categoryId: string;
+        isFlashDeal: boolean;
+        flashLabel: string | null;
+        flashDiscount: number | null;
     }>;
     /**
      * Update an existing product
@@ -92,6 +104,9 @@ export declare class ProductsService {
         discount?: number;
         image?: string;
         categoryId?: string;
+        isFlashDeal?: boolean;
+        flashLabel?: string;
+        flashDiscount?: number;
     }): Promise<{
         category: {
             name: string;
@@ -110,6 +125,9 @@ export declare class ProductsService {
         originalPrice: number | null;
         discount: number | null;
         categoryId: string;
+        isFlashDeal: boolean;
+        flashLabel: string | null;
+        flashDiscount: number | null;
     }>;
     /**
      * Delete an existing product
@@ -127,6 +145,9 @@ export declare class ProductsService {
         originalPrice: number | null;
         discount: number | null;
         categoryId: string;
+        isFlashDeal: boolean;
+        flashLabel: string | null;
+        flashDiscount: number | null;
     }>;
 }
 export default ProductsService;

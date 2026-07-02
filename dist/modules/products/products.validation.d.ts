@@ -11,6 +11,9 @@ export declare const createProductSchema: z.ZodObject<{
         discount: z.ZodOptional<z.ZodNumber>;
         image: z.ZodString;
         categoryId: z.ZodString;
+        isFlashDeal: z.ZodOptional<z.ZodBoolean>;
+        flashLabel: z.ZodOptional<z.ZodString>;
+        flashDiscount: z.ZodOptional<z.ZodNumber>;
     }, z.core.$strip>;
 }, z.core.$strip>;
 /**
@@ -25,6 +28,9 @@ export declare const updateProductSchema: z.ZodObject<{
         discount: z.ZodOptional<z.ZodNumber>;
         image: z.ZodOptional<z.ZodString>;
         categoryId: z.ZodOptional<z.ZodString>;
+        isFlashDeal: z.ZodOptional<z.ZodBoolean>;
+        flashLabel: z.ZodOptional<z.ZodString>;
+        flashDiscount: z.ZodOptional<z.ZodNumber>;
     }, z.core.$strip>;
     params: z.ZodObject<{
         id: z.ZodString;

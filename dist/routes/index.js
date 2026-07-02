@@ -14,6 +14,7 @@ const newsletter_routes_1 = __importDefault(require("../modules/newsletter/newsl
 const partners_routes_1 = __importDefault(require("../modules/partners/partners.routes"));
 const upload_routes_1 = __importDefault(require("../modules/upload/upload.routes"));
 const payments_routes_1 = __importDefault(require("../modules/payments/payments.routes"));
+const dashboard_routes_1 = __importDefault(require("../modules/dashboard/dashboard.routes"));
 const router = (0, express_1.Router)();
 // Mount modules under API namespaces
 router.use('/auth', auth_routes_1.default);
@@ -26,5 +27,6 @@ router.use('/newsletter', newsletter_routes_1.default);
 router.use('/partners', partners_routes_1.default);
 router.use('/upload', upload_routes_1.default);
 router.use('/payments', payments_routes_1.default);
-exports.default = router;
+router.use('/dashboard', dashboard_routes_1.default);
+exports.default = router; // trigger reload env
 //# sourceMappingURL=index.js.map

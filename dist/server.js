@@ -7,6 +7,7 @@ const http_1 = __importDefault(require("http"));
 const app_1 = __importDefault(require("./app"));
 const env_1 = require("./config/env");
 const database_1 = require("./config/database");
+// Initialize http server instance
 const server = http_1.default.createServer(app_1.default);
 async function startServer() {
     try {

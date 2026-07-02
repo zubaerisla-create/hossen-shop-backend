@@ -33,6 +33,9 @@ exports.createProductSchema = zod_1.z.object({
         categoryId: zod_1.z
             .string({ error: 'Category ID is required.' })
             .uuid('Category ID must be a valid UUID.'),
+        isFlashDeal: zod_1.z.boolean().optional(),
+        flashLabel: zod_1.z.string().optional(),
+        flashDiscount: zod_1.z.number().min(0).max(100).optional(),
     }),
 });
 /**
@@ -71,6 +74,9 @@ exports.updateProductSchema = zod_1.z.object({
             .string()
             .uuid('Category ID must be a valid UUID.')
             .optional(),
+        isFlashDeal: zod_1.z.boolean().optional(),
+        flashLabel: zod_1.z.string().optional(),
+        flashDiscount: zod_1.z.number().min(0).max(100).optional(),
     }),
     params: zod_1.z.object({
         id: zod_1.z.string().uuid('Invalid Product ID format.'),

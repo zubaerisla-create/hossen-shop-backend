@@ -13,7 +13,7 @@ class OrdersController {
             if (!req.user) {
                 throw apiError_1.ApiError.unauthorized();
             }
-            const order = await orders_service_1.OrdersService.createOrder(req.user.id, req.body.items, req.body.paymentMethod);
+            const order = await orders_service_1.OrdersService.createOrder(req.user.id, req.body.items);
             apiResponse_1.ApiResponse.success(res, 'Order placed successfully.', order, 201);
         }
         catch (error) {

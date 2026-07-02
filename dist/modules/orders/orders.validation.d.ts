@@ -8,7 +8,6 @@ export declare const createOrderSchema: z.ZodObject<{
             productId: z.ZodString;
             quantity: z.ZodNumber;
         }, z.core.$strip>>;
-        paymentMethod: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
 }, z.core.$strip>;
 /**
@@ -17,9 +16,9 @@ export declare const createOrderSchema: z.ZodObject<{
 export declare const updateOrderStatusSchema: z.ZodObject<{
     body: z.ZodObject<{
         status: z.ZodEnum<{
-            Confirmed: "Confirmed";
-            Placed: "Placed";
             Assigned: "Assigned";
+            Placed: "Placed";
+            Confirmed: "Confirmed";
             "Out for Delivery": "Out for Delivery";
             Delivered: "Delivered";
             Cancelled: "Cancelled";

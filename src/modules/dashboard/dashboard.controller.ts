@@ -3,7 +3,7 @@ import { prisma } from '../../config/database';
 import { sendEmail } from '../../utils/email';
 
 export class DashboardController {
-  static async getStats(req: Request, res: Response, next: NextFunction) {
+  static async getStats(_req: Request, res: Response, next: NextFunction) {
     try {
       // 1. Core counters
       const totalOrders = await prisma.order.count();

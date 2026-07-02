@@ -13,7 +13,6 @@ exports.createOrderSchema = zod_1.z.object({
             quantity: zod_1.z.number().int('Quantity must be an integer.').positive('Quantity must be at least 1.'),
         }))
             .min(1, 'Order must contain at least one product item.'),
-        paymentMethod: zod_1.z.string().optional(),
     }),
 });
 /**

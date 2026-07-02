@@ -7,7 +7,7 @@ class OrdersService {
     /**
      * Submit a new checkout order under a database transaction
      */
-    static async createOrder(userId, itemsInput, paymentMethod) {
+    static async createOrder(userId, itemsInput) {
         // Extract all unique product IDs
         const productIds = [...new Set(itemsInput.map((item) => item.productId))];
         // Fetch products to verify existence and get current prices
@@ -42,7 +42,6 @@ class OrdersService {
                 data: {
                     userId,
                     totalAmount,
-                    status: paymentMethod === 'card' ? 'Confirmed' : 'Placed',
                     items: {
                         create: orderItemsData,
                     },
