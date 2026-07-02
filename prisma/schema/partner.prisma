@@ -1,0 +1,14 @@
+// ─── Partner Model ────────────────────────────────────────────────────────────
+
+model Partner {
+  id        String   @id @default(uuid())
+  name      String
+  vehicle   String   // 'Bike' | 'Car' | 'Cycle'
+  email     String   @unique
+  phone     String
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("partners")
+}

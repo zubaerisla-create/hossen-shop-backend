@@ -1,0 +1,12 @@
+// ─── Category Model ───────────────────────────────────────────────────────────
+
+model Category {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  image     String
+  products  Product[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("categories")
+}

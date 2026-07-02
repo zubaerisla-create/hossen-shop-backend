@@ -1,0 +1,10 @@
+// ─── SiteSetting Model ────────────────────────────────────────────────────────
+
+model SiteSetting {
+  key       String   @id // e.g. "hero", "appBanner", "newsletter", "footer", "siteSettings"
+  value     Json     // Store the content structure as JSON
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("site_settings")
+}

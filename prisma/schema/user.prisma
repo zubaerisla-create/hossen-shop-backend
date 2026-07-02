@@ -1,0 +1,13 @@
+// ─── User Model ───────────────────────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(uuid()) // Maps to Supabase auth.users.id
+  email     String   @unique
+  name      String?
+  role      String   @default("customer") // "customer" | "admin"
+  orders    Order[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}

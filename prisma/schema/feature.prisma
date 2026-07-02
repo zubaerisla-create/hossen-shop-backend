@@ -1,0 +1,12 @@
+// ─── Feature Model ────────────────────────────────────────────────────────────
+
+model Feature {
+  id        String   @id @default(uuid())
+  title     String
+  subtitle  String
+  iconName  String   // 'delivery' | 'organic' | 'delivery-time' | 'secure-pay'
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("features")
+}

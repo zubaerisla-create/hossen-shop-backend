@@ -1,0 +1,23 @@
+// ─── Product Model ────────────────────────────────────────────────────────────
+
+model Product {
+  id            String      @id @default(uuid())
+  name          String
+  rating        Float       @default(4.5)
+  ratingCount   Int         @default(0)
+  price         Float
+  unit          String
+  originalPrice Float?
+  discount      Int?        // e.g., 7 for 7% OFF
+  image         String
+  categoryId    String
+  category      Category    @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  isFlashDeal   Boolean     @default(false)
+  flashLabel    String?
+  flashDiscount Float?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  orderItems    OrderItem[]
+
+  @@map("products")
+}
