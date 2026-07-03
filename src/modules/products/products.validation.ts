@@ -32,8 +32,8 @@ export const createProductSchema = z.object({
       .string({ error: 'Category ID is required.' })
       .uuid('Category ID must be a valid UUID.'),
     isFlashDeal: z.boolean().optional(),
-    flashLabel: z.string().optional(),
-    flashDiscount: z.number().min(0).max(100).optional(),
+    flashLabel: z.string().nullable().optional(),
+    flashDiscount: z.number().min(0).max(100).nullable().optional(),
   }),
 });
 
@@ -74,8 +74,8 @@ export const updateProductSchema = z.object({
       .uuid('Category ID must be a valid UUID.')
       .optional(),
     isFlashDeal: z.boolean().optional(),
-    flashLabel: z.string().optional(),
-    flashDiscount: z.number().min(0).max(100).optional(),
+    flashLabel: z.string().nullable().optional(),
+    flashDiscount: z.number().min(0).max(100).nullable().optional(),
   }),
   params: z.object({
     id: z.string().uuid('Invalid Product ID format.'),
